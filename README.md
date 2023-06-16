@@ -1,1 +1,1 @@
-# RoA-LMI-DAR
+# Region of Attraction - Linear Matrix Inequalities - Differential-Algebraic Representation
