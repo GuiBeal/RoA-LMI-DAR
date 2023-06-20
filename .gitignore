@@ -1,0 +1,17 @@
+**/temp/
+**/*.log
+
+**/*-eps-converted-to.pdf
+**/*.aux
+**/*.bbl
+**/*.blg
+**/*.fdb_latexmk
+**/*.fls
+**/*.nav
+**/*.out
+**/*.snm
+**/*.toc
+
+**/*.asv
+**/*.autosave
+**/slprj/
