@@ -97,9 +97,10 @@ for a = a0:as:af
   P = double(P) %#ok<NOPTS>
 
   % Plot
-  step = 0.02;
-  x1 = -a:step:a;
-  x2 = -a:step:a;
+  d = 3;
+  step = 0.01;
+  x1 = -d:step:d;
+  x2 = -d:step:d;
   [x1,x2] = meshgrid(x1,x2);
 
   r = P(1,1).*x1.^2 + P(1,2).*x1.*x2 + P(2,1).*x2.*x1 + P(2,2).*x2.^2 < 1;
@@ -109,9 +110,8 @@ for a = a0:as:af
   r = r(r ~= 0);
 
   fig = figure('Name', num2str(a));
-  grid on;
   hold all;
-  scatter(x1, x2, 1/4*36, 'MarkerEdgeColor', 0.75*[1 1 1], 'MarkerFaceColor', 0.75*[1 1 1]);
+  scatter(x1, x2, 1, 'MarkerEdgeColor', 0.75*[1 1 1], 'MarkerFaceColor', 0.75*[1 1 1]);
   plot([ V(1,:) , V(1,1) ], [ V(2,:) , V(2,1) ], 'LineWidth', 2, 'Color', 'black');
 
   % Phase Portrait
@@ -130,8 +130,10 @@ for a = a0:as:af
   ylim(d*[-1 1]);
   xlabel('$x_1$', 'Interpreter', 'latex');
   ylabel('$x_2$', 'Interpreter', 'latex');
+  grid on;
+  set(gca, 'DataAspectRatio', [1 1 1])
 
-  saveas(fig, sprintf('fig/exemplo1_%d.eps', index), 'epsc'); 
+  saveas(fig, sprintf('fig/exemplo1_%d.eps', index), 'epsc');
   print(fig, sprintf('fig/exemplo1_%d.png', index), '-dpng', '-r300');
   index = index + 1;
 end
