@@ -1,5 +1,8 @@
 # Region of Attraction - Linear Matrix Inequalities - Differential-Algebraic Representation
 
+* [Report/Relatório](LaTeX/report.pdf)
+* [Presentation/Apresentação](LaTeX/slides.pdf)
+
 ## English Description
 
 Estimation of the Region of Attraction (RoA) of a Nonlinear System in Differential-Algebraic Representation (DAR) through Linear Matrix Inequations (LMIs).
